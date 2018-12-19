@@ -33,11 +33,11 @@
 
 <a id="chapter-2"></a>
 ## Схемы
-Схемы на EasyEDA: https://easyeda.com/beragumbo/nixieclock
-	- Общая
-	- ИН-14/ИН-16
-	- ИН-14
-	- ИН-12
+- Схемы на EasyEDA: https://easyeda.com/beragumbo/nixieclock
+- Общая
+- ИН-14/ИН-16
+- ИН-14
+- ИН-12
 Гербер файлы уже в архиве!  
 Список компонентов тоже есть в архиве!
 ![SCHEME](https://github.com/AlexGyver/NixieClock/blob/master/schemes/scheme.jpg)
