@@ -350,6 +350,12 @@ void calculateTime() {
       changeBright();
     }
 
+    if (!alm_flag && alm_mins == mins && alm_hrs == hrs && !digitalRead(ALARM)) {
+      mode = 0;
+      alm_flag = true;
+      almTimer.start();
+      almTimer.reset();
+    }
 
     if (mode == 0) sendTime();
 
