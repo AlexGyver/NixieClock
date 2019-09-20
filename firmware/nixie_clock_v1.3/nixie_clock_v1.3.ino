@@ -335,6 +335,12 @@ void calculateTime() {
         mins = now.minute();
         hrs = now.hour();
       }
+      if (mins > 59) {
+        mins = 0;
+        hrs++;
+        if (hrs > 23) hrs = 0;
+        changeBright();
+      }
 
       if (!alm_flag && alm_mins == mins && alm_hrs == hrs && !digitalRead(ALARM)) {
         mode = 0;
@@ -342,19 +348,6 @@ void calculateTime() {
         almTimer.start();
         almTimer.reset();
       }
-    }
-    if (mins > 59) {
-      mins = 0;
-      hrs++;
-      if (hrs > 23) hrs = 0;
-      changeBright();
-    }
-
-    if (!alm_flag && alm_mins == mins && alm_hrs == hrs && !digitalRead(ALARM)) {
-      mode = 0;
-      alm_flag = true;
-      almTimer.start();
-      almTimer.reset();
     }
 
     if (mode == 0) sendTime();
