@@ -149,7 +149,7 @@ void sendTime() {
 void changeBright() {
   // установка яркости от времени суток
   if ( (hrs >= NIGHT_START && hrs <= 23)
-       || (hrs >= 0 && hrs <= NIGHT_END) ) on_time = (float)ON_TIME * BRIGHT_N / 100;
+       || (hrs >= 0 && hrs < NIGHT_END) ) on_time = (float)ON_TIME * BRIGHT_N / 100;
   else on_time = (float)ON_TIME * BRIGHT / 100;
 }
 
