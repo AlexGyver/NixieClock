@@ -43,18 +43,6 @@
 ![SCHEME](https://github.com/AlexGyver/NixieClock/blob/master/schemes/scheme.png)
 
 <a id="chapter-3"></a>
-## Материалы и компоненты
-### Ссылки оставлены на магазины, с которых я закупаюсь уже не один год
-- Arduino NANO http://ali.ski/GVQzs  http://ali.ski/3SJf_
-- RTC DS3231 http://ali.ski/2iTBXy
-- DHT22 (датчик) http://ali.ski/lgwhky
-- Пищалка http://ali.ski/lgwhky
-- Кнопки http://ali.ski/6prO3r  http://ali.ski/zdU4eJ
-- Ступенчатое сверло http://ali.ski/OdKec
-- Проводочки http://ali.ski/uUR_r  http://ali.ski/uUR_r
-- Корпус https://hobbybazza.ru/zagotovki-iz-mdf/2345-schkatulka-bolschaya-s-kruglym-kraem.html
-- Ещё вариант корпуса https://hobbybazza.ru/derevyannye-zagotovki/3853-kupyurnica-pod-evro.html
-
 ## Вам скорее всего пригодится
 * [Всё для пайки (паяльники и примочки)](http://alexgyver.ru/all-for-soldering/)
 * [Недорогие инструменты](http://alexgyver.ru/my_instruments/)
