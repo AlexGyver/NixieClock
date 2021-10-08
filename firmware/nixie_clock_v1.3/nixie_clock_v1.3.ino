@@ -149,7 +149,7 @@ void sendTime() {
 void changeBright() {
   // установка яркости от времени суток
   if ( (hrs >= NIGHT_START && hrs <= 23)
-       || (hrs >= 0 && hrs <= NIGHT_END) ) on_time = (float)ON_TIME * BRIGHT_N / 100;
+       || (hrs >= 0 && hrs < NIGHT_END) ) on_time = (float)ON_TIME * BRIGHT_N / 100;
   else on_time = (float)ON_TIME * BRIGHT / 100;
 }
 
@@ -335,21 +335,20 @@ void calculateTime() {
         mins = now.minute();
         hrs = now.hour();
       }
+      if (mins > 59) {
+        mins = 0;
+        hrs++;
+        if (hrs > 23) hrs = 0;
+        changeBright();
+      }
 
-      if (!alm_flag && alm_mins == mins && alm_hrs == hrs && !digitalRead(ALARM)) {
+      if (!alm_flag && alm_mins == mins && alm_hrs == hrs && !digitalRead(ALARM)) { // Alarm should be checked only once in a minute, so it should be in block "if (secs > 59) {", after mins and hrs update.
         mode = 0;
         alm_flag = true;
         almTimer.start();
         almTimer.reset();
       }
     }
-    if (mins > 59) {
-      mins = 0;
-      hrs++;
-      if (hrs > 23) hrs = 0;
-      changeBright();
-    }
-
 
     if (mode == 0) sendTime();
 
